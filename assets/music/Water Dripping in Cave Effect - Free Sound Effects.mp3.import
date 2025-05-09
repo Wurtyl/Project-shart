@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0nwjh6xvgtit"
+path="res://.godot/imported/Water Dripping in Cave Effect - Free Sound Effects.mp3-fca844707e5bb4dad57002a4f7a30c99.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Water Dripping in Cave Effect - Free Sound Effects.mp3"
+dest_files=["res://.godot/imported/Water Dripping in Cave Effect - Free Sound Effects.mp3-fca844707e5bb4dad57002a4f7a30c99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
