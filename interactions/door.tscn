@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://behwcts7agobb"]
+
+[ext_resource type="Script" uid="uid://dn70j7uddg6cy" path="res://door.gd" id="1_0phs7"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://4ax0eb13djvw" path="res://assets/sprites/mushdoor.png" id="2_50cdl"]
+[ext_resource type="AudioStream" uid="uid://c312x8vaucljj" path="res://assets/sounds/Best Sound Effects Door Handle Jiggle.mp3" id="4_1g4i0"]
+[ext_resource type="AudioStream" uid="uid://2dqkhewqxybn" path="res://assets/sounds/Door Deadbolt Lock & Unlock Sound Effect(1).mp3" id="5_j4o8g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y4x7"]
+size = Vector2(20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(42, 32)
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_0phs7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5y4x7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_50cdl")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_ba8gm")]
+action_name = "Unlock"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(11, 0)
+shape = SubResource("RectangleShape2D_v6xrn")
+
+[node name="Locked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1g4i0")
+
+[node name="Unlocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_j4o8g")
+volume_db = 24.0
+
+[connection signal="finished" from="Unlocked" to="." method="_on_unlocked_finished"]

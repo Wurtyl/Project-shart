@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0pvq100ri02m"
+path="res://.godot/imported/ROCKS AND STONES IMPACT - (Sound Effect) 🔊🔊.mp3-507dda424e275fd7701139ec4ec84493.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ROCKS AND STONES IMPACT - (Sound Effect) 🔊🔊.mp3"
+dest_files=["res://.godot/imported/ROCKS AND STONES IMPACT - (Sound Effect) 🔊🔊.mp3-507dda424e275fd7701139ec4ec84493.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
