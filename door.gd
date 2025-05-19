@@ -15,13 +15,11 @@ func _ready():
 func _on_interact():
 	if manager.score >= 2:
 		unlocked.play()
-		await _on_unlocked_finished()
-		DialogueManager.start_dialogue(global_position, lines)
-		await DialogueManager.dialogue_finished
-		queue_free()
 	else: 
 		locked.play()
 
 
 func _on_unlocked_finished():
-	pass
+	DialogueManager.start_dialogue(global_position, lines)
+	await DialogueManager.dialogue_finished
+	queue_free()

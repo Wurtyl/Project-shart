@@ -16,11 +16,9 @@ func _ready():
 
 func _on_interact():
 	pickup.play()
-	await _on_pickup_finished()
-	DialogueManager.start_dialogue(global_position, lines)
-	await DialogueManager.dialogue_finished
-	queue_free()
 
 
 func _on_pickup_finished():
-	pass
+	DialogueManager.start_dialogue(global_position, lines)
+	await DialogueManager.dialogue_finished
+	queue_free()

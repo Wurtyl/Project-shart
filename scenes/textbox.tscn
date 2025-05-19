@@ -1,18 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0ipx0vp2ijg8"]
 
-[ext_resource type="Script" uid="uid://b1ukts5wrm6wq" path="res://scripts/textbox.gd" id="1_g5d5p"]
+[ext_resource type="Script" path="res://scripts/textbox.gd" id="1_g5d5p"]
 [ext_resource type="Texture2D" uid="uid://dqmy6wxklmqyc" path="res://assets/sprites/Dialogue box.png" id="2_qagdh"]
 [ext_resource type="FontFile" uid="uid://dqas7ih87cp4c" path="res://assets/gamer_2/Gamer.ttf" id="3_c4wvf"]
 
 [node name="Textbox" type="MarginContainer"]
 z_index = 20
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1120.0
-offset_bottom = -615.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 32.0
+offset_bottom = 33.0
 script = ExtResource("1_g5d5p")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
