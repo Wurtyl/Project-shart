@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://0lrf71trmolx"]
+
+[ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/player.tscn" id="1_bl13t"]
+[ext_resource type="PackedScene" uid="uid://dim2x7vywapc7" path="res://scenes/theshroom_2.tscn" id="2_iyx0m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74lek"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_bl13t")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_74lek")
+
+[node name="Theshroom2" parent="." instance=ExtResource("2_iyx0m")]
+position = Vector2(-188, -727)

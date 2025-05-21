@@ -12,7 +12,6 @@ var dashing = false
 var can_dash = true
 
 @onready var animated_sprite = $PlayerAnimatedSprite2D
-@onready var slime = %SlimeShape
 
 func _physics_process(delta):
 	# Add the gravity.

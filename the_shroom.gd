@@ -6,11 +6,16 @@ const lines: Array[String] = [
 	"is that a...",
 	"glowing mushroom??",
 	"*YAAAAAAAAWN*",
-	"man am I tired"
+	"man am I tired",
+	"I wonder if this mushroom...",
+	"has anyt..hing",
+	"...to do wit..h that..."
 ]
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	pass
+	DialogueManager.start_dialogue(global_position, lines)
+	await DialogueManager.dialogue_finished
+	interaction_area.queue_free()

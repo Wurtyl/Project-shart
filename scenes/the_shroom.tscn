@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpp0h51pp7x1w"]
+
+[ext_resource type="Script" uid="uid://dqns06lx2047g" path="res://the_shroom.gd" id="1_35s5p"]
+[ext_resource type="Texture2D" uid="uid://6vgct2r8a6w8" path="res://assets/sprites/THE SHROOM-Recovered-Sheet.png" id="2_oftnu"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_tdr0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju6rp"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(0, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfnnf"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(40, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnvtv"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(80, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik54t"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(120, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrlgh"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(160, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysmfw"]
+atlas = ExtResource("2_oftnu")
+region = Rect2(200, 0, 40, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nboaa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju6rp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfnnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik54t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrlgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysmfw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roc81"]
+size = Vector2(113, 117)
+
+[node name="The shroom" type="StaticBody2D"]
+z_index = 20
+script = ExtResource("1_35s5p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-83, -9)
+scale = Vector2(1.825, 1.825)
+sprite_frames = SubResource("SpriteFrames_nboaa")
+autoplay = "default"
+frame = 3
+frame_progress = 0.241681
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_tdr0p")]
+action_name = "inspect"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-75, -20)
+shape = SubResource("RectangleShape2D_roc81")

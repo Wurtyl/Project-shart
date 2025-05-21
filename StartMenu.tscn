@@ -1,8 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://coqlfxecd3d8u"]
+[gd_scene load_steps=13 format=3 uid="uid://coqlfxecd3d8u"]
 
 [ext_resource type="FontFile" uid="uid://dqas7ih87cp4c" path="res://assets/gamer_2/Gamer.ttf" id="1_bdeks"]
+[ext_resource type="Script" uid="uid://xfp00j72e5a6" path="res://start_menu.gd" id="1_rd8cm"]
+[ext_resource type="VideoStream" uid="uid://c04iigj81elu1" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="2_ufv5y"]
+[ext_resource type="Texture2D" uid="uid://j65rcjghmty8" path="res://assets/sprites/Sprite-0005.png" id="3_0d5ky"]
+[ext_resource type="Texture2D" uid="uid://crccl7yf0wfuo" path="res://assets/sprites/Sprite-0004-export.png" id="4_7htnq"]
+[ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="6_8bi5o"]
+[ext_resource type="AudioStream" uid="uid://cb1m8tlpdmyqr" path="res://assets/sounds/Mouse Click - Sound Effect (HD).mp3" id="7_627k2"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_314lc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rd8cm"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bi5o"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7htnq"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wf2c"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo4tm"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -19,42 +57,104 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rd8cm")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.5
-offset_top = -160.5
-offset_right = 233.5
-offset_bottom = 160.5
+offset_left = -575.5
+offset_top = -324.5
+offset_right = 575.5
+offset_bottom = 324.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1446.5
+offset_top = -662.5
+offset_right = 1422.5
+offset_bottom = 759.5
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_ufv5y")
+autoplay = true
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 20
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -233.0
+offset_top = 44.0
+offset_right = 234.0
+offset_bottom = 372.0
+grow_horizontal = 2
 theme_override_constants/separation = 70
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_bdeks")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_314lc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7htnq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3wf2c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lo4tm")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_bdeks")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_314lc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7htnq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3wf2c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lo4tm")
 text = "Options"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_bdeks")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_314lc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7htnq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3wf2c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lo4tm")
 text = "Exit :("
+
+[node name="Sprite-0005" type="Sprite2D" parent="."]
+position = Vector2(1.99999, -170)
+scale = Vector2(5.64453, 5.64453)
+texture = ExtResource("3_0d5ky")
+
+[node name="Sprite-0004-export" type="Sprite2D" parent="."]
+position = Vector2(12, -458)
+scale = Vector2(5.71951, 5.71951)
+texture = ExtResource("4_7htnq")
+
+[node name="BOOM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8bi5o")
+
+[node name="Clik" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_627k2")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -24,6 +24,7 @@ aseprite_executable_path="/run/user/1000/doc/343064bf/aseprite"
 Music="*res://scenes/music.tscn"
 InteractionManager="*res://interactions/InteractionManager.tscn"
 DialogueManager="*res://Singletons/DialogueManager.gd"
+GlobalCanvasLayer="*res://scenes/canvas_layer.tscn"
 
 [display]
 

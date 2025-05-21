@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://dim2x7vywapc7"]
+
+[ext_resource type="Script" uid="uid://daiv1685hfgka" path="res://theshroom_2.gd" id="1_sfmer"]
+[ext_resource type="Texture2D" uid="uid://6vgct2r8a6w8" path="res://assets/sprites/THE SHROOM-Recovered-Sheet.png" id="2_qeloi"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_kjclo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju6rp"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(0, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfnnf"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(40, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnvtv"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(80, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik54t"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(120, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrlgh"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(160, 0, 40, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysmfw"]
+atlas = ExtResource("2_qeloi")
+region = Rect2(200, 0, 40, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_riqn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju6rp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfnnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik54t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrlgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysmfw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w72sm"]
+size = Vector2(528.5, 424)
+
+[node name="Theshroom2" type="StaticBody2D"]
+script = ExtResource("1_sfmer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(271, 31)
+scale = Vector2(6.35, 6.35)
+sprite_frames = SubResource("SpriteFrames_riqn8")
+autoplay = "default"
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_kjclo")]
+position = Vector2(71, 99)
+action_name = "Talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(40, -114)
+shape = SubResource("RectangleShape2D_w72sm")
