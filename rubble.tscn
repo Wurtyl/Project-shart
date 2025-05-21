@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bu6j6kbylokqx"]
 
-[ext_resource type="Script" path="res://rubble.gd" id="1_h3vx5"]
+[ext_resource type="Script" uid="uid://grvm31xg2y78" path="res://rubble.gd" id="1_h3vx5"]
 [ext_resource type="Texture2D" uid="uid://ytmxn4iq0yck" path="res://assets/sprites/Rubble.png" id="2_trq1q"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_trq1q"]
 [ext_resource type="AudioStream" uid="uid://0pvq100ri02m" path="res://assets/sounds/ROCKS AND STONES IMPACT - (Sound Effect) 🔊🔊.mp3" id="4_8tfih"]

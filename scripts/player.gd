@@ -11,7 +11,8 @@ var max_jumps = 2
 var dashing = false
 var can_dash = true
 
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $PlayerAnimatedSprite2D
+@onready var slime = %SlimeShape
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -19,7 +20,6 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	if is_on_floor():
 		jump_count = 0
-
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jump_count < max_jumps:
 		velocity.y = JUMP_VELOCITY
