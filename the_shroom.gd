@@ -16,6 +16,12 @@ func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	DialogueManager.start_dialogue(global_position, lines)
-	await DialogueManager.dialogue_finished
+	DialogueManager.start_dialogue_alert_player(global_position, lines)
 	interaction_area.queue_free()
+	await DialogueManager.dialogue_complete
+	print("dialog compelted")
+	GlobalCanvasLayer.on_transition_finished.connect(load_game_scene)
+	GlobalCanvasLayer.transition()
+
+func load_game_scene():
+	get_tree().change_scene_to_file("res://scenes/trippy.tscn")

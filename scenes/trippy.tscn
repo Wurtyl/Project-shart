@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://det7dsh58wso2"]
 
-[ext_resource type="VideoStream" uid="uid://c04iigj81elu1" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="1_o2vv7"]
+[ext_resource type="VideoStream" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="1_o2vv7"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/player.tscn" id="1_vjbi3"]
 [ext_resource type="Texture2D" uid="uid://b4k7tl68lsnm2" path="res://assets/sprites/unnamed-export-export.png" id="3_lgn7n"]
 [ext_resource type="Texture2D" uid="uid://bns2r81nxtdgp" path="res://assets/sprites/Sprite-0006.png" id="3_mvd3n"]
@@ -95,8 +95,8 @@ size = Vector2(86, 33)
 
 [node name="Sprite-0006" type="Sprite2D" parent="."]
 z_index = 20
-position = Vector2(425, 645)
-scale = Vector2(5.03125, 6.20521)
+position = Vector2(422, 674)
+scale = Vector2(8.82813, 10.888)
 texture = ExtResource("3_mvd3n")
 
 [node name="Panel" type="Panel" parent="."]
@@ -108,10 +108,10 @@ offset_bottom = 1667.0
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
 z_index = 4
 layout_mode = 0
-offset_left = 813.0
-offset_top = 560.0
+offset_left = 691.0
+offset_top = 535.0
 offset_right = 1555.0
-offset_bottom = 971.0
+offset_bottom = 1039.0
 stream = ExtResource("1_o2vv7")
 autoplay = true
 expand = true
@@ -173,14 +173,14 @@ z_index = 4
 position = Vector2(423, 600)
 
 [node name="Camera2D" type="Camera2D" parent="Player 2"]
-position = Vector2(134, -70)
+position = Vector2(166, -71)
 zoom = Vector2(4, 4)
 limit_bottom = 1000000000
 limit_smoothed = true
 
 [node name="Theshroom2" parent="." instance=ExtResource("5_06wbi")]
 z_index = 20
-position = Vector2(479, 498)
+position = Vector2(516, 531)
 
 [node name="Player" parent="." instance=ExtResource("1_vjbi3")]
 visible = false

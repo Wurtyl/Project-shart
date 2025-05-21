@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://coqlfxecd3d8u"]
 
-[ext_resource type="FontFile" uid="uid://dqas7ih87cp4c" path="res://assets/gamer_2/Gamer.ttf" id="1_bdeks"]
-[ext_resource type="Script" uid="uid://xfp00j72e5a6" path="res://start_menu.gd" id="1_rd8cm"]
-[ext_resource type="VideoStream" uid="uid://c04iigj81elu1" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="2_ufv5y"]
-[ext_resource type="Texture2D" uid="uid://j65rcjghmty8" path="res://assets/sprites/Sprite-0005.png" id="3_0d5ky"]
-[ext_resource type="Texture2D" uid="uid://crccl7yf0wfuo" path="res://assets/sprites/Sprite-0004-export.png" id="4_7htnq"]
-[ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="6_8bi5o"]
-[ext_resource type="AudioStream" uid="uid://cb1m8tlpdmyqr" path="res://assets/sounds/Mouse Click - Sound Effect (HD).mp3" id="7_627k2"]
+[ext_resource type="Script" path="res://start_menu.gd" id="1_oer8o"]
+[ext_resource type="VideoStream" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="2_72bhu"]
+[ext_resource type="FontFile" uid="uid://dqas7ih87cp4c" path="res://assets/gamer_2/Gamer.ttf" id="3_mk8vi"]
+[ext_resource type="Texture2D" uid="uid://j65rcjghmty8" path="res://assets/sprites/Sprite-0005.png" id="4_xfi3s"]
+[ext_resource type="Texture2D" uid="uid://crccl7yf0wfuo" path="res://assets/sprites/Sprite-0004-export.png" id="5_vy7a6"]
+[ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="6_riuaf"]
+[ext_resource type="AudioStream" uid="uid://cb1m8tlpdmyqr" path="res://assets/sounds/Mouse Click - Sound Effect (HD).mp3" id="7_mt4wq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rd8cm"]
 bg_color = Color(0, 0, 0, 1)
@@ -57,7 +57,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rd8cm")
+script = ExtResource("1_oer8o")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -81,12 +81,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1446.5
-offset_top = -662.5
-offset_right = 1422.5
-offset_bottom = 759.5
+offset_top = -926.5
+offset_right = 1496.5
+offset_bottom = 980.5
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_ufv5y")
+stream = ExtResource("2_72bhu")
 autoplay = true
 expand = true
 
@@ -106,7 +106,7 @@ theme_override_constants/separation = 70
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_bdeks")
+theme_override_fonts/font = ExtResource("3_mk8vi")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
@@ -118,7 +118,7 @@ text = "Start Game"
 [node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_bdeks")
+theme_override_fonts/font = ExtResource("3_mk8vi")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
@@ -130,7 +130,7 @@ text = "Options"
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_bdeks")
+theme_override_fonts/font = ExtResource("3_mk8vi")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
@@ -142,18 +142,18 @@ text = "Exit :("
 [node name="Sprite-0005" type="Sprite2D" parent="."]
 position = Vector2(1.99999, -170)
 scale = Vector2(5.64453, 5.64453)
-texture = ExtResource("3_0d5ky")
+texture = ExtResource("4_xfi3s")
 
 [node name="Sprite-0004-export" type="Sprite2D" parent="."]
 position = Vector2(12, -458)
 scale = Vector2(5.71951, 5.71951)
-texture = ExtResource("4_7htnq")
+texture = ExtResource("5_vy7a6")
 
 [node name="BOOM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_8bi5o")
+stream = ExtResource("6_riuaf")
 
 [node name="Clik" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_627k2")
+stream = ExtResource("7_mt4wq")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://no82d380uwd0"]
 
 [ext_resource type="Texture2D" uid="uid://bqas5hh7vkg78" path="res://assets/sprites/Theaxe.png" id="1_5ivr3"]
-[ext_resource type="Script" uid="uid://cs76hcfpjcwt4" path="res://scenes/the_axe.gd" id="1_naafs"]
+[ext_resource type="Script" path="res://scenes/the_axe.gd" id="1_naafs"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="2_naafs"]
 [ext_resource type="AudioStream" uid="uid://cbk1888tq8vkq" path="res://assets/sounds/Item Pick up (Counter Strike Source) - Sound Effect for editing.mp3" id="3_oamqa"]
 

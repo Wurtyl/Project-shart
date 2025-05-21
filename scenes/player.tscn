@@ -1,7 +1,8 @@
-[gd_scene load_steps=50 format=3 uid="uid://dqnaqj8yb6hwd"]
+[gd_scene load_steps=57 format=3 uid="uid://dqnaqj8yb6hwd"]
 
-[ext_resource type="Script" uid="uid://cmu5dkdva0rs4" path="res://scripts/player.gd" id="1_ofpvf"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ofpvf"]
 [ext_resource type="Texture2D" uid="uid://defkb02h88khw" path="res://assets/sprites/TheRuns-Sheet.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://cdu8m1trcooqf" path="res://assets/sprites/Theyawns-Sheet.png" id="3_oe2ka"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2els"]
 load_path = "res://.godot/imported/TheRuns-Sheet.png-09f29bf4b366f0dd72bfc3ef80c23a0f.ctex"
@@ -81,6 +82,30 @@ region = Rect2(2240, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5jhy"]
 atlas = ExtResource("2_g2els")
 region = Rect2(2304, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgd6h"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpqvt"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6blko"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53ysx"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw818"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12qxc"]
+atlas = ExtResource("3_oe2ka")
+region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
 atlas = SubResource("CompressedTexture2D_g2els")
@@ -206,9 +231,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_487ah")
 }],
-"loop": true,
+"loop": false,
 "name": &"DEAD",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -249,6 +274,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"Trip",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgd6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpqvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6blko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53ysx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw818")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12qxc")
+}],
+"loop": false,
+"name": &"Yawn",
 "speed": 4.0
 }, {
 "frames": [{
@@ -359,11 +407,11 @@ script = ExtResource("1_ofpvf")
 position = Vector2(0, -18)
 scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_81gkq")
-animation = &"Trip"
+animation = &"Yawn"
 autoplay = "idle"
-frame = 6
-frame_progress = 0.115797
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -8.5)
 shape = SubResource("RectangleShape2D_g2els")
+
+[connection signal="animation_finished" from="PlayerAnimatedSprite2D" to="." method="_on_player_animated_sprite_2d_animation_finished"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://behwcts7agobb"]
 
-[ext_resource type="Script" uid="uid://dn70j7uddg6cy" path="res://door.gd" id="1_0phs7"]
+[ext_resource type="Script" path="res://door.gd" id="1_0phs7"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="1_ba8gm"]
 [ext_resource type="Texture2D" uid="uid://4ax0eb13djvw" path="res://assets/sprites/mushdoor.png" id="2_50cdl"]
 [ext_resource type="AudioStream" uid="uid://c312x8vaucljj" path="res://assets/sounds/Best Sound Effects Door Handle Jiggle.mp3" id="4_1g4i0"]

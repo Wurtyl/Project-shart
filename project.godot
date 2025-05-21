@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="First Game"
-run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://scenes/StartMenu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [aseprite_importers]
@@ -25,6 +25,7 @@ Music="*res://scenes/music.tscn"
 InteractionManager="*res://interactions/InteractionManager.tscn"
 DialogueManager="*res://Singletons/DialogueManager.gd"
 GlobalCanvasLayer="*res://scenes/canvas_layer.tscn"
+Globals="*res://globals.gd"
 
 [display]
 

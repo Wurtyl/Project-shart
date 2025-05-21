@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfee00rvhxtji"]
+
+[ext_resource type="Script" path="res://note_5.gd" id="1_cef3l"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="2_82bdl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbcwg"]
+radius = 21.0238
+
+[node name="Note 5" type="Node2D"]
+script = ExtResource("1_cef3l")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_82bdl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_bbcwg")

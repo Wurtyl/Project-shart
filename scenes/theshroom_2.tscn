@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dim2x7vywapc7"]
+[gd_scene load_steps=13 format=3 uid="uid://dim2x7vywapc7"]
 
-[ext_resource type="Script" uid="uid://daiv1685hfgka" path="res://theshroom_2.gd" id="1_sfmer"]
+[ext_resource type="Script" path="res://theshroom_2.gd" id="1_sfmer"]
 [ext_resource type="Texture2D" uid="uid://6vgct2r8a6w8" path="res://assets/sprites/THE SHROOM-Recovered-Sheet.png" id="2_qeloi"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_kjclo"]
+[ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="4_l1t3y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ju6rp"]
 atlas = ExtResource("2_qeloi")
@@ -61,8 +62,8 @@ size = Vector2(528.5, 424)
 script = ExtResource("1_sfmer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(271, 31)
-scale = Vector2(6.35, 6.35)
+position = Vector2(269, 17)
+scale = Vector2(8.075, 8.075)
 sprite_frames = SubResource("SpriteFrames_riqn8")
 autoplay = "default"
 
@@ -71,5 +72,8 @@ position = Vector2(71, 99)
 action_name = "Talk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(40, -114)
+position = Vector2(90, -83)
 shape = SubResource("RectangleShape2D_w72sm")
+
+[node name="BOOM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_l1t3y")
