@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c12uwyxk5ft04"
+path="res://.godot/imported/Calmness - Ethereal Fantasy Meditative Ambient - Beautiful Ambient Music for Relaxation and Sleep.mp3-fe468e4316349e2547b7908a7df8f185.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Calmness - Ethereal Fantasy Meditative Ambient - Beautiful Ambient Music for Relaxation and Sleep.mp3"
+dest_files=["res://.godot/imported/Calmness - Ethereal Fantasy Meditative Ambient - Beautiful Ambient Music for Relaxation and Sleep.mp3-fe468e4316349e2547b7908a7df8f185.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

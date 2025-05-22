@@ -1,8 +1,9 @@
-[gd_scene load_steps=57 format=3 uid="uid://dqnaqj8yb6hwd"]
+[gd_scene load_steps=58 format=3 uid="uid://dqnaqj8yb6hwd"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_ofpvf"]
+[ext_resource type="Script" uid="uid://cmu5dkdva0rs4" path="res://scripts/player.gd" id="1_ofpvf"]
 [ext_resource type="Texture2D" uid="uid://defkb02h88khw" path="res://assets/sprites/TheRuns-Sheet.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://cdu8m1trcooqf" path="res://assets/sprites/Theyawns-Sheet.png" id="3_oe2ka"]
+[ext_resource type="AudioStream" uid="uid://vvju7kwb86r8" path="res://assets/sounds/IMG_3527.mp3" id="4_dqkch"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2els"]
 load_path = "res://.godot/imported/TheRuns-Sheet.png-09f29bf4b366f0dd72bfc3ef80c23a0f.ctex"
@@ -414,4 +415,14 @@ autoplay = "idle"
 position = Vector2(1, -8.5)
 shape = SubResource("RectangleShape2D_g2els")
 
+[node name="Blehh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+
+[node name="Dash Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="Dash Again Timer" type="Timer" parent="."]
+
 [connection signal="animation_finished" from="PlayerAnimatedSprite2D" to="." method="_on_player_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Dash Timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Dash Again Timer" to="." method="_on_dash_again_timer_timeout"]

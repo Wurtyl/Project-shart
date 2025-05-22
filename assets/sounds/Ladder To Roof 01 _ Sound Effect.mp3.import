@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nxxy3vyo43n1"
+path="res://.godot/imported/Ladder To Roof 01 _ Sound Effect.mp3-d65417322447030c47fe27ec0596f703.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Ladder To Roof 01 _ Sound Effect.mp3"
+dest_files=["res://.godot/imported/Ladder To Roof 01 _ Sound Effect.mp3-d65417322447030c47fe27ec0596f703.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

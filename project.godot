@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="First Game"
+config/name="Kit !"
 run/main_scene="res://scenes/StartMenu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [aseprite_importers]
@@ -21,7 +21,6 @@ aseprite_executable_path="/run/user/1000/doc/343064bf/aseprite"
 
 [autoload]
 
-Music="*res://scenes/music.tscn"
 InteractionManager="*res://interactions/InteractionManager.tscn"
 DialogueManager="*res://Singletons/DialogueManager.gd"
 GlobalCanvasLayer="*res://scenes/canvas_layer.tscn"
@@ -78,3 +77,5 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

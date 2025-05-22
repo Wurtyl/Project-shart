@@ -15,7 +15,10 @@ var can_dash = true
 var is_dead = false
 var is_yawning = false
 
+@onready var bleh = $Blehh
 @onready var animated_sprite = $PlayerAnimatedSprite2D
+@onready var dash = $"Dash Timer"
+@onready var dash_again = $"Dash Again Timer"
 
 signal _on_player_animation_finished(anim_name)
 
@@ -42,8 +45,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("dash") and can_dash:
 		dashing = true
 		can_dash = false
-		$"Dash Timer".start()
-		$"Dash Again Timer".start()
+		dash.start()
+		dash_again.start()
 
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
@@ -86,6 +89,7 @@ func _on_dash_again_timer_timeout():
 
 func handle_death():
 	animated_sprite.play("DEAD")
+	bleh.play()
 	is_dead = true
 
 

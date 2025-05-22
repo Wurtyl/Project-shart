@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://det7dsh58wso2"]
+[gd_scene load_steps=11 format=3 uid="uid://det7dsh58wso2"]
 
-[ext_resource type="VideoStream" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="1_o2vv7"]
+[ext_resource type="VideoStream" uid="uid://c04iigj81elu1" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="1_o2vv7"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/player.tscn" id="1_vjbi3"]
 [ext_resource type="Texture2D" uid="uid://b4k7tl68lsnm2" path="res://assets/sprites/unnamed-export-export.png" id="3_lgn7n"]
 [ext_resource type="Texture2D" uid="uid://bns2r81nxtdgp" path="res://assets/sprites/Sprite-0006.png" id="3_mvd3n"]
+[ext_resource type="AudioStream" uid="uid://c12uwyxk5ft04" path="res://assets/sounds/Calmness - Ethereal Fantasy Meditative Ambient - Beautiful Ambient Music for Relaxation and Sleep.mp3" id="3_vrbys"]
 [ext_resource type="PackedScene" uid="uid://dwpo5vqo2sl7t" path="res://scenes/player_2.tscn" id="4_mvd3n"]
 [ext_resource type="PackedScene" uid="uid://dim2x7vywapc7" path="res://scenes/theshroom_2.tscn" id="5_06wbi"]
 
@@ -117,6 +118,8 @@ autoplay = true
 expand = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vrbys")
+autoplay = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_06wbi")

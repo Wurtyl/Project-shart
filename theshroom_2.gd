@@ -13,7 +13,7 @@ const lines: Array[String] = [
 	"SHROOM: I Know Many Things",
 	"SHROOM: I Am Anita The All knowing",
 	"ANITA: And I Know That You ATE MY SON!!!!",
-	"ANITA: Shroomthalomew Was A Beuatiful Baby Boy!!",
+	"ANITA: Shroomtholamew Was A Beuatiful Baby Boy!!",
 	"KIT: I ATE YOUR SON???",
 	"ANITA: YES YOU ATE MY SON!!",
 	"KIT: ...",
@@ -49,4 +49,4 @@ func _on_interact():
 	GlobalCanvasLayer.transition()
 
 func load_game_scene():
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/cave_2.tscn")

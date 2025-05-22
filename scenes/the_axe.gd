@@ -8,7 +8,6 @@ const lines: Array[String] = [
 	"This guy's got an axe in his head!",
 	".......",
 	"Don't mind if I do..",
-	"YOINK!"
 ]
 
 func _ready():

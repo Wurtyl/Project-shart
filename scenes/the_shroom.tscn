@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dpp0h51pp7x1w"]
 
-[ext_resource type="Script" path="res://the_shroom.gd" id="1_35s5p"]
+[ext_resource type="Script" uid="uid://dqns06lx2047g" path="res://the_shroom.gd" id="1_35s5p"]
 [ext_resource type="Texture2D" uid="uid://6vgct2r8a6w8" path="res://assets/sprites/THE SHROOM-Recovered-Sheet.png" id="2_oftnu"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_tdr0p"]
 

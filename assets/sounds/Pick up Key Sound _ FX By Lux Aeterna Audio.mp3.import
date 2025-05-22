@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsfqprl6bu8hs"
+path="res://.godot/imported/Pick up Key Sound _ FX By Lux Aeterna Audio.mp3-8d5a448fe886e60ca17343a6ceac262d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Pick up Key Sound _ FX By Lux Aeterna Audio.mp3"
+dest_files=["res://.godot/imported/Pick up Key Sound _ FX By Lux Aeterna Audio.mp3-8d5a448fe886e60ca17343a6ceac262d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

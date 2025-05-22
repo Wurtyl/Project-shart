@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0wmjdb1513hg"]
+
+[ext_resource type="Script" uid="uid://bdcfeegqp2ws0" path="res://the_same.gd" id="1_vrpas"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="2_5h8yq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ybd5e"]
+radius = 23.0217
+
+[node name="TheSame" type="Node2D"]
+script = ExtResource("1_vrpas")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_5h8yq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_ybd5e")

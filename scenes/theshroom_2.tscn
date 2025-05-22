@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dim2x7vywapc7"]
 
-[ext_resource type="Script" path="res://theshroom_2.gd" id="1_sfmer"]
+[ext_resource type="Script" uid="uid://daiv1685hfgka" path="res://theshroom_2.gd" id="1_sfmer"]
 [ext_resource type="Texture2D" uid="uid://6vgct2r8a6w8" path="res://assets/sprites/THE SHROOM-Recovered-Sheet.png" id="2_qeloi"]
 [ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="3_kjclo"]
 [ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="4_l1t3y"]

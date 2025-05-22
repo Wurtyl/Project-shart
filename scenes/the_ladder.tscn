@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1crhamstgke8"]
+
+[ext_resource type="Script" uid="uid://tivkpqvylfvy" path="res://the_ladder.gd" id="1_uuqkm"]
+[ext_resource type="PackedScene" uid="uid://baew2wukyglvn" path="res://interactions/interaction area/interaction_area.tscn" id="2_07f2l"]
+[ext_resource type="AudioStream" uid="uid://nxxy3vyo43n1" path="res://assets/sounds/Ladder To Roof 01 _ Sound Effect.mp3" id="3_trmuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1qaq"]
+size = Vector2(15, 24)
+
+[node name="The ladder" type="Node2D"]
+script = ExtResource("1_uuqkm")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_07f2l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(2.5, 2)
+shape = SubResource("RectangleShape2D_l1qaq")
+
+[node name="ladder" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_trmuk")

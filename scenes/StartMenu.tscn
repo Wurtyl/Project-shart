@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://coqlfxecd3d8u"]
+[gd_scene load_steps=14 format=3 uid="uid://coqlfxecd3d8u"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_oer8o"]
-[ext_resource type="VideoStream" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="2_72bhu"]
+[ext_resource type="Script" uid="uid://xfp00j72e5a6" path="res://start_menu.gd" id="1_oer8o"]
+[ext_resource type="VideoStream" uid="uid://c04iigj81elu1" path="res://assets/sounds/[appsgolem.com][360p][00-00-00][00-15-00]_Psychedelic_Colorful_Ambient_W.ogv" id="2_72bhu"]
 [ext_resource type="FontFile" uid="uid://dqas7ih87cp4c" path="res://assets/gamer_2/Gamer.ttf" id="3_mk8vi"]
 [ext_resource type="Texture2D" uid="uid://j65rcjghmty8" path="res://assets/sprites/Sprite-0005.png" id="4_xfi3s"]
 [ext_resource type="Texture2D" uid="uid://crccl7yf0wfuo" path="res://assets/sprites/Sprite-0004-export.png" id="5_vy7a6"]
 [ext_resource type="AudioStream" uid="uid://bahsghqrhoyll" path="res://assets/sounds/Vine boom sound effect.mp3" id="6_riuaf"]
 [ext_resource type="AudioStream" uid="uid://cb1m8tlpdmyqr" path="res://assets/sounds/Mouse Click - Sound Effect (HD).mp3" id="7_mt4wq"]
+[ext_resource type="AudioStream" uid="uid://b8pntldw4eom6" path="res://assets/sounds/Undertale OST_ 022 - Snowdin Town.mp3" id="8_frkif"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rd8cm"]
 bg_color = Color(0, 0, 0, 1)
@@ -96,10 +97,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -233.0
-offset_top = 44.0
-offset_right = 234.0
-offset_bottom = 372.0
+offset_left = -234.0
+offset_top = 85.0
+offset_right = 233.0
+offset_bottom = 413.0
 grow_horizontal = 2
 theme_override_constants/separation = 70
 
@@ -114,18 +115,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_7htnq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3wf2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lo4tm")
 text = "Start Game"
-
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_mk8vi")
-theme_override_font_sizes/font_size = 75
-theme_override_styles/focus = SubResource("StyleBoxFlat_rd8cm")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8bi5o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7htnq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3wf2c")
-theme_override_styles/normal = SubResource("StyleBoxFlat_lo4tm")
-text = "Options"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -151,10 +140,15 @@ texture = ExtResource("5_vy7a6")
 
 [node name="BOOM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_riuaf")
+volume_db = -12.0
 
 [node name="Clik" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_mt4wq")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_frkif")
+volume_db = -20.0
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
